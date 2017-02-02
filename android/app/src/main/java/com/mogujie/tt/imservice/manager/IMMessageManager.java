@@ -365,7 +365,8 @@ public class IMMessageManager extends IMManager{
 
 
 
-    // 拉取历史消息 {from MessageActivity}
+	
+    // 拉取历史消息 {from MessageActivity}  @leechen2014, 放开注释379
     public List<MessageEntity> loadHistoryMsg(int pullTimes,String sessionKey,PeerEntity peerEntity){
         int lastMsgId = 99999999;
         int lastCreateTime = 1455379200;
@@ -376,7 +377,7 @@ public class IMMessageManager extends IMManager{
             logger.i("#loadHistoryMsg# sessionEntity is null");
             lastMsgId = sessionEntity.getLatestMsgId();
             // 这个地方设定有问题，先使用最大的时间,session的update设定存在问题
-            //lastCreateTime = sessionEntity.getUpdated();
+            lastCreateTime = sessionEntity.getUpdated();
         }
 
         if(lastMsgId <1 || TextUtils.isEmpty(sessionKey)){
