@@ -8,3 +8,7 @@
 		
 		我们的官方维护人员会抽时间解答,谢谢大家的理解.
 		* qq群:341273218
+
+ # log
+ 根据问题 (Android) lastCreateTime写死导致message取不出来了 #141  对android客户端中对IMMessageManager.java 中的loadHistoryMsg 方法进行修改,并释放了第279行注释
+ 
